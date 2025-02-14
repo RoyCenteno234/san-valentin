@@ -10,7 +10,6 @@
             text-align: center;
             background-color: #ffe6f2;
             padding: 50px;
-            
         }
         .container {
             background: white;
@@ -45,13 +44,26 @@
         .obvious:hover {
             background-color: #e68900;
         }
+        #message {
+            font-size: 24px;
+            color: #ff4081;
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>¿Quieres ser mi San Valentín? 💖</h1>
-        <a class="btn yes" href="https://wa.me/524611021388">Sí 💕</a>
-        <a class="btn obvious" href="https://wa.me/524611021388">Obvio que sí 😍</a>
+        <a class="btn yes" href="javascript:void(0);" onclick="showMessage()">Sí 💕</a>
+        <a class="btn obvious" href="javascript:void(0);" onclick="showMessage()">Obvio que sí 😍</a>
+        <p id="message"></p>
     </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').innerText = "¡Me gustas mucho! 💖";
+        }
+    </script>
 </body>
 </html>
